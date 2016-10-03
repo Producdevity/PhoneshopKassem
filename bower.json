@@ -1,0 +1,21 @@
+{
+  "name": "psk",
+  "description": "phoneshopkassem",
+  "main": "",
+  "authors": [
+    "Yassine Gherbi"
+  ],
+  "license": "MIT",
+  "homepage": "www.phoneshopkassem.nl",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hover": "Hover#^2.0.2"
+  }
+}

@@ -11,10 +11,30 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/dsfs', function () {
+    return view('client/home/home');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/dsf', 'HomeController@index');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Client Web Routes
+|--------------------------------------------------------------------------
+| Home
+| Telefoon
+| Tablet
+| informatie
+| contact
+*/
+
+Route::group(['namespace' => 'Client'], function() {
+    // Controllers Within The "App\Http\Controllers\Client" Namespace
+    Route::get('/',             'ContentController@homePage');
+    Route::get('/informatie',   'ContentController@infoPage');
+    Route::get('/contact',      'ContentController@contactPage');
+});
