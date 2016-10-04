@@ -29,87 +29,77 @@
             <div class="h_menu4">
                 <ul class="memenu skyblue">
                     <li class="{{ isActiveRoute('/') }}"><a class="color8" href="{{ url('/') }}">Home</a></li>
-                    <li class="{{ isActiveRoute('telefoons') }}"><a class="color2" href="{{ url('/telefoon') }}">Telefoon</a>
-                        <div class="mepanel">
-                            <div class="row">
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <h4>Telefoons</h4>
-                                        <ul>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <ul>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <h4>Merken</h4>
-                                        <ul>
-                                          <li><a href="?url=mobile&brand_id=brandid">brandname</a></li>
-                                          <li><a href="?url=mobile&brand_id=brandid">brandname</a></li>
-                                          <li><a href="?url=mobile&brand_id=brandid">brandname</a></li>
-                                          <li><a href="?url=mobile&brand_id=brandid">brandname</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <li class="{{ isActiveRoute('telefoons') }}"><a class="color2" href="{{ url('/merken/type/1') }}">Telefoon</a>
+                      <div class="mepanel">
+                        <div class="row">
+                          <div class="col1">
+                            <div class="h_nav">
+                              <h4>Telefoons</h4>
+                              <ul>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                              </ul>
                             </div>
+                          </div>
+                          <div class="col1">
+                            <div class="h_nav">
+                              <ul>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col1">
+                            <div class="h_nav">
+                              <h4>Merken</h4>
+                              <ul>
+                                @foreach ($data['brands'] as $brand)
+                                  <li><a href="{{ url('/toestellen/merk/'.$brand->id.'/type/1') }}">{{$brand->name}}</a></li>
+                                @endforeach
+                              </ul>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </li>
-                    <li class="{{ isActiveRoute('tablets') }}"><a class="color2" href="{{ url('/tablet') }}">Tablet</a>
-                        <div class="mepanel">
-                            <div class="row">
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <h4>Tablets</h4>
-                                        <ul>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                          <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <ul>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                          <li><a href="?url=details&device_id=deviceid">fullname</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="col1">
-                                    <div class="h_nav">
-                                        <h4>Merken</h4>
-                                        <ul>
-                                          <li><a href="?url=tablet&brand_id=">brandname</a></li>
-                                          <li><a href="?url=tablet&brand_id=">brandname</a></li>
-                                          <li><a href="?url=tablet&brand_id=">brandname</a></li>
-                                          <li><a href="?url=tablet&brand_id=">brandname</a></li>
-                                          <li><a href="?url=tablet&brand_id=">brandname</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <li class="{{ isActiveRoute('tablets') }}"><a class="color2" href="{{ url('/merken/type/2') }}">Tablet</a>
+                      <div class="mepanel">
+                        <div class="row">
+                          <div class="col1">
+                            <div class="h_nav">
+                              <h4>Tablets</h4>
+                              <ul>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                                <li><a href="?url=details&device_id='.$device['id'].'">' . $fullName . '</a></li>
+                              </ul>
                             </div>
+                          </div>
+                          <div class="col1">
+                            <div class="h_nav">
+                              <ul>
+                                <li><a href="?url=details&device_id=deviceid">fullname</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col1">
+                            <div class="h_nav">
+                              <h4>Merken</h4>
+                              <ul>
+                                @foreach ($data['brands'] as $brand)
+                                  <li><a href="{{ url('/toestellen/merk/'.$brand->id.'/type/2') }}">{{$brand->name}}</a></li>
+                                @endforeach
+                              </ul>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </li>
                     <li class="{{ isActiveRoute('informatie') }}"><a class="color1" href="{{ url('/informatie') }}">Informatie</a></li>
                     <li class="{{ isActiveRoute('contact') }}"><a class="color6" href="{{ url('/contact') }}">Contact</a></li>

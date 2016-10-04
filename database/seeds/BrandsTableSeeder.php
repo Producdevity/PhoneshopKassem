@@ -22,6 +22,11 @@ class BrandsTableSeeder extends Seeder
       $brand_samsung->logo = "samsung_logo.png";
       $brand_samsung->save();
 
+      $brand_lg = new Brand();
+      $brand_lg->name = "LG";
+      $brand_lg->logo = "lg_logo.png";
+      $brand_lg->save();
+
       $brand_htc = new Brand();
       $brand_htc->name = "HTC";
       $brand_htc->logo = "htc_logo.png";

@@ -59,7 +59,7 @@ function oneOrMore($number, $singular, $plural)
 |
 */
 function availableSeats($seats, $registrations, $free, $full)
-{   
+{
     $registrations =  count($registrations);
     $totalAvailable = "$seats" - "$registrations";
     if ("$totalAvailable" > 0) {
@@ -78,7 +78,7 @@ function availableSeats($seats, $registrations, $free, $full)
 |
 */
 function totalFreeSeats($seats, $registrations)
-{    
+{
     $registrations =  count($registrations);
     $totalAvailable = "$seats" - "$registrations";
     return $totalAvailable;
@@ -93,7 +93,7 @@ function totalFreeSeats($seats, $registrations)
 |
 */
 function translateType($type)
-{   
+{
     if($type == "car"){
         return "Auto";
     } elseif ($type == "motor") {
@@ -103,17 +103,18 @@ function translateType($type)
 
 /*
 |--------------------------------------------------------------------------
-| countDatesOnType
+| countDevicesOnType
 |--------------------------------------------------------------------------
 |
-| Count dates that has the current type
+| Count devices of the brand with this type
+| to check if the brand has any relational devices
 |
 */
-function countDatesOnType($dates, $type)
+function countDevicesOnType($devices, $typeId)
 {
     $i = 0;
-    foreach ($dates as $date){
-        if($date->type == $type){
+    foreach ($devices as $device){
+        if($device->type_id == $typeId){
             $i++;
         }
     }

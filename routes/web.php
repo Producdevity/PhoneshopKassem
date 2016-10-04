@@ -37,4 +37,10 @@ Route::group(['namespace' => 'Client'], function() {
     Route::get('/',             'ContentController@homePage');
     Route::get('/informatie',   'ContentController@infoPage');
     Route::get('/contact',      'ContentController@contactPage');
+
+    Route::get('/merken/type/{type}',                      'ContentController@brandsOnType');
+    Route::get('/toestellen/merk/{brand}/type/{type}',                      'ContentController@devicesOnBrandAndType');
+    Route::get('/toestellen/{device}',                      'ContentController@deviceDetails');
+
+    Route::get('/toestellen/{device}/type/{type}',       'ContentController@deviceOnType');
 });
