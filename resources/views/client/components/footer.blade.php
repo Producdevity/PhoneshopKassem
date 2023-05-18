@@ -11,20 +11,19 @@
             </div>
             <div class="col-md-4 amet-sed ">
                 <h4>CONTACT</h4>
-
                 <p>BTW:
-                    <?php echo $btwNr; ?> </p>
+                    <?php echo "btwNr"; ?> </p>
                 <p>Kvk:
-                    <?php echo $kvkNr; ?>
+                    <?php echo "kvkNr"; ?>
                 </p>
                 <p>Tel:
-                    <?php echo $telNr; ?>
+                    <?php echo "telNr"; ?>
                 </p>
                 <p>Mail:
-                    <?php echo $mail; ?>
+                    <?php echo "mail"; ?>
                 </p>
                 <ul class="social">
-                    <li><a href="<?php echo $fbLink; ?>"><i class="facebook"> </i></a></li>
+                    <li><a href="#fblink"><i class="facebook"> </i></a></li>
                 </ul>
             </div>
             <div class="col-md-4 amet-sed ">
@@ -40,8 +39,6 @@
         </div>
     </div>
     <div class="footer-class">
-        <p>© 2016 Phoneshop Kassem | All Rights Reserved | <a href="<?php echo $devLink; ?>" target="">Yassine Gherbi</a> </p>
+        <p>© 2016 Phoneshop Kassem | All Rights Reserved | <a href="<?php echo "devLink"; ?>" target="">Yassine Gherbi</a> </p>
     </div>
 </div>
-</body>
-</html>
