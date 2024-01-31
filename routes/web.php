@@ -11,13 +11,9 @@
 |
 */
 
-Route::get('/dsfs', function () {
-    return view('client/home/home');
-});
-
 Auth::routes();
 
-Route::get('/dsf', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 
 
